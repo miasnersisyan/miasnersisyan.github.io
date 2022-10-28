@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="salarycount.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Great+Vibes&family=Kalam:wght@700&family=Lato&family=Open+Sans:wght@500&family=Poppins:wght@500&family=Roboto+Mono:wght@600&family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <h1 class="header1">Աշխատավարձի Հաշվիչ</h1>
+
+    <div class="d-flex">
+        <div class="w1">
+            <div class="btn1div">
+                <button class="btn1" id="registerBtn">Գրանցված</button>
+                <button class="btn2" id="clearBtn">Մաքուր</button>
+            </div>
+            <P class="p1">Մասնակցում եք արդյո՞ք պարտադիր կուտակային կենսաթոշակային համակարգին: Եթե այո, ապա ի՞նչ հիմունքներով</P>
+
+            <button class="button1" id="button1"> Այո, կամավոր՝ միացած 07/2018-ից հետո</button>
+            <button class="button2" id="button2"> Այո, պարտադիր կամ մինչ 07/2018 միացած կամավոր</button>
+            <button class="button1" id="button3"> Չեմ Մասնակցում</button>
+            <p class="p1">Արդյո՞ք աշխատում եք ՏՏ ոլորտի հարկային արտոնություններից օգտվող ընկերությունում։</p>
+            <div class="jst-end">
+                <div class="swipe-div" id="swiperdiv">
+                    <div class="swiper" id="swiper"></div>
+                </div>
+            </div>
+            <p class="p1">Նշեք աշխատավարձի չափը</p>
+            <input type="text" class="salaryinp" id="salaryInput">
+
+            <p class="p1">Եկամտային Հարկ (21%) / ՏՏ (10%)</p>
+            <div class="boxd1" id="incomD">0</div>
+
+            <p class="p1">Սոցիալական վճար</p>
+            <div class="boxd1" id="socialD">0</div>
+
+            <p class="p1">Դրոշմանիշային վճար</p>
+            <div class="boxd1" id="flagD">0</div>
+
+            <p class="p1">Մաքուր Մնացորդ</p>
+            <div class="boxd1" id="clearBalancD">0</div>
+
+        </div>
+    </div>
+
+
+     
+ 
+    
+
+    <script src="salarycount.js"></script>
+</body>
+</html>
