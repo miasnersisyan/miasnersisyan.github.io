@@ -1,0 +1,18 @@
+
+.changeHallsCompSpan{
+    color: white;
+    font-size: 22px;
+    cursor:pointer;
+   font-size: 14px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   margin: 0px 10px;
+}
+
+
+@media only screen and (min-width: 190px) and (max-width: 500px)  {
+    .changeHallsCompSpan{
+       
+       margin-top: 10px;
+    }
+}

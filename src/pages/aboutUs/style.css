@@ -1,0 +1,324 @@
+
+.about-1{
+    width: 100%;
+    padding: 55px 0px 0px 0px;
+}
+
+.about-header1{
+    color:white;
+  
+   font-size: 34px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   text-align: center;
+}
+
+.about-p1{
+    color: white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    width: 50%;
+    margin: 25px 0px;
+}
+
+.about-swiper-div{
+    width:50%;
+    margin: 30px 0px;
+ 
+}
+
+.about-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0px;
+}
+.about-2div1{
+    width: 48%;
+}
+
+.about-2img{
+    width: 100%;
+}
+
+.about-2p1{
+    color:white;
+    line-height: 25px;
+   font-size: 16px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+}
+
+.about-2btn{
+    color:white;
+   font-size: 15px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   cursor: pointer;
+   border: none;
+   background: none;
+   padding: 10px 30px;
+   margin-top: 25px;
+   transition: 0.6s;
+   border: 1px solid white;
+}
+
+.about-2btn:hover{
+    box-shadow: 1px 1px 11px -4px white;
+    background: white;
+    color:#262626;
+    transition: 0.6s;
+}
+
+.about-3header{
+    text-align: center;
+    color: white;
+    font-size: 34px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+}
+
+.about-3div1{
+    width: 50%;
+}
+
+.about-3p1{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   margin-top: 15px;
+   line-height: 1.1;
+}
+
+.about-3ul{
+    width: 100%;
+    list-style: none;
+    padding: 20px 0px;
+}
+
+.about-3ul-li{
+    color: white;
+    font-size: 14px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   margin-top: 15px;
+   line-height: 1.1;
+}
+
+.check-spn{
+    margin-right: 20px;
+}
+
+.about-4{
+    margin: 25px 0px;
+    border-bottom: 1px solid white;
+
+}
+
+.about-4p1{
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    width: 50%;
+    margin-top: 70px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+}
+
+.about-5{
+    width: 60%;
+    margin: 20px 0px 70px 0px;
+}
+
+.about-5img{
+    width: 100%;
+}
+
+@media only screen and (min-width: 190px) and (max-width: 500px)  {
+    .about-header1{
+        
+       font-size: 27px;
+     
+    }
+
+    .about-p1{
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .about-swiper-div{
+        width: 90%;
+    }
+
+    .about-2{
+        display: block;
+    }
+    .about-2div1{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .about-2p1{
+       
+        font-size: 15px;
+    }
+
+    .about-3header{
+        
+        font-size: 27px;
+      
+     }
+
+     .about-3div1{
+        width: 90%;
+    }
+    .about-3p1{
+        font-size: 15px;
+    }
+    
+    .about-4p1{
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .about-5{
+        width: 90%;
+    }
+ 
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 750px)  {
+    .about-header1{
+        
+       font-size: 27px;
+     
+    }
+
+    .about-p1{
+        width: 75%;
+       
+    }
+
+    .about-swiper-div{
+        width: 75%;
+    }
+
+    .about-2{
+        display: block;
+    }
+    .about-2div1{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .about-2p1{
+       
+        font-size: 15px;
+    }
+
+    .about-3header{
+        
+        font-size: 27px;
+      
+     }
+
+     .about-3div1{
+        width: 75%;
+    }
+    .about-3p1{
+        font-size: 15px;
+    }
+    
+    .about-4p1{
+        width: 75%;
+        font-size: 15px;
+    }
+
+    .about-5{
+        width: 75%;
+    }
+ 
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1000px)  {
+    
+
+    .about-p1{
+        width: 85%;
+       
+    }
+
+    .about-swiper-div{
+        width: 85%;
+    }
+
+    .about-2{
+        display: block;
+    }
+    .about-2div1{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .about-2p1{
+       
+        font-size: 15px;
+    }
+
+    .about-3header{
+        
+        font-size: 27px;
+      
+     }
+
+     .about-3div1{
+        width: 85%;
+    }
+    .about-3p1{
+        font-size: 15px;
+    }
+    
+    .about-4p1{
+        width: 85%;
+        font-size: 15px;
+    }
+
+    .about-5{
+        width: 85%;
+    }
+ 
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1300px)  {
+    
+
+    .about-p1{
+        width: 70%;
+       
+    }
+
+    .about-swiper-div{
+        width: 70%;
+    }
+
+    
+
+     .about-3div1{
+        width: 70%;
+    }
+  
+    
+    .about-4p1{
+        width: 70%;
+      
+    }
+
+    .about-5{
+        width: 70%;
+    }
+ 
+}

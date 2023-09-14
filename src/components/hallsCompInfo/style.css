@@ -1,0 +1,39 @@
+
+.hallsCompInfo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid white;
+}
+
+.hallsCompInfo-p1{
+    color:white;
+  
+   font-size: 17px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500; 
+}
+
+.hallsCompInfo-p2{
+    color:white;
+  
+   font-size: 16px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500; 
+   margin: 10px 0px;
+}
+.hallsCompInfo-box1{
+    margin-left: 40px;
+}
+
+
+@media only screen and (min-width: 190px) and (max-width: 500px)  {
+    .hallsCompInfo{
+      display: block;
+      text-align: center;
+    }
+    .hallsCompInfo-box1{
+        margin-left: 0px;
+    }
+}

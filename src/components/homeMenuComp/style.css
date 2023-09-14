@@ -1,0 +1,26 @@
+
+.homemenucompdiv{
+    width:32%;
+    margin: 5px;
+  
+    transition: 0.5s;
+}
+.homemenucompimg{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.homemenucompdiv:hover .homemenucompimg{
+    transform: scale(1,1.1);
+    filter: brightness(50%);
+    transition: 0.5s;
+}
+
+@media only screen and (min-width: 190px) and (max-width: 750px)  {
+    .homemenucompdiv{
+        width:100%;
+       margin: 0px;
+       margin-top: 10px;
+       
+    }
+}

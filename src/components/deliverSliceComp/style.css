@@ -1,0 +1,53 @@
+
+.about-6header{
+    text-align: center;
+    color: white;
+    font-size: 34px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+}
+
+.about-6p1{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   margin-top: 15px;
+   line-height: 1.1;
+}
+
+.about-6btn{
+background: white;
+color: #262626;
+border: none;
+cursor: pointer;
+padding: 10px 30px;
+font-size: 16px;
+font-family: 'Poppins', sans-serif;
+font-weight: 500;
+margin-top: 50px;
+transition: 0.6s;
+}
+
+.about-6btn:hover{
+    transition: 0.6s;
+    color: white;
+    background: #262626;
+}
+
+
+@media only screen and (min-width: 190px) and (max-width: 500px)  {
+   .about-6header{
+    font-size: 19px;
+    padding: 0px 10px;
+   }
+
+   .about-6p1{
+    padding: 0px 10px;
+   }
+   .about-6btn{
+    font-size: 13px;
+    padding: 8px 16px;
+   }
+}

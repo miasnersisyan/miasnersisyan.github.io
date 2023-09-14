@@ -1,0 +1,15 @@
+
+.hallsCompDiv{
+    width:32%;
+    margin: 5px;
+}
+.hallsCompImg{
+    width: 100%;
+}
+@media only screen and (min-width: 190px) and (max-width: 750px)  {
+    .hallsCompDiv{
+        width:100%;
+        margin: 0px;
+        margin-top: 10px;
+    }
+}

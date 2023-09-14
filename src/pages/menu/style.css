@@ -1,0 +1,12 @@
+
+.menu-1{
+    padding: 70px 0px;
+}
+
+.menu-2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 55px;
+}

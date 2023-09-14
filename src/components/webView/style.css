@@ -1,0 +1,50 @@
+
+.header{
+    padding: 20px 0px;
+    width: 100%;
+    position: fixed;
+    z-index: 120;
+   background-color: black;
+   
+}
+.header-1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLogoImg{
+    width: 100px;
+    cursor: pointer;
+}
+
+.header-1-1{
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.headerSliceSpan{
+    color:white;
+    cursor:pointer;
+   font-size: 14px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+}
+
+.headerLink{
+    text-decoration: none;
+    margin-right: 60px;
+}
+
+.headerBackCover{
+    height: 145px;
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1050px)  {
+ 
+    .headerLink{
+     
+        margin-right: 30px;
+    }
+}

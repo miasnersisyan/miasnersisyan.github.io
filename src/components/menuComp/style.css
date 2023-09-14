@@ -1,0 +1,15 @@
+.menuComp{
+    width:32%;
+    margin: 5px;
+}
+.menuCompImg{
+    width: 100%;
+}
+
+@media only screen and (min-width: 190px) and (max-width: 750px)  {
+    .menuComp{
+        width:100%;
+        margin: 0px;
+        margin-top: 10px;
+    }
+}

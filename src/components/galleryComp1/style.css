@@ -1,0 +1,22 @@
+
+.gallerycomp1{
+    width:32%;
+    margin: 5px;
+}
+.gallerycomp1Img1{
+    width: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.gallerycomp1Img1:hover{
+    transition: 0.5s;
+    filter: brightness(50%);
+}
+
+@media only screen and (min-width: 190px) and (max-width: 750px)  {
+    .gallerycomp1{
+        width:100%;
+        margin: 0px;
+        margin-top: 10px;
+    }
+}

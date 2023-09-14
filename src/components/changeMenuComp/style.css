@@ -1,0 +1,64 @@
+.changeMenuCompDiv{
+    width: 30%;
+    position: relative;
+    height: auto;
+}
+
+
+.changeMenuComp{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    cursor:pointer;
+   font-size: 20px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   background: none;
+   border: none;
+   border-radius: 10px;
+   border-bottom: 1px solid white;
+  width: 100%;
+}
+
+.changeMenuCompDiv-1{
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 100%;
+   display: block;
+   z-index: 20;
+   background-color: black;
+   border-radius: 10px;
+}
+
+.changeMenuCompDivBtn{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   border-radius: 10px;
+   padding: 10px 0px;
+  
+ width: 100%;
+}
+
+@media only screen and (min-width: 190px) and (max-width: 500px)  {
+  .changeMenuCompDiv{
+    width: 90%;
+    position: relative;
+    height: auto;
+}
+
+}
+@media only screen and (min-width: 500px) and (max-width: 750px)  {
+  .changeMenuCompDiv{
+    width: 75%;
+    position: relative;
+    height: auto;
+}
+
+}
