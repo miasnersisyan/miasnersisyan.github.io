@@ -4,11 +4,9 @@ import './style.css'
 import { changeSliderVisible, selectSliderVisible } from '../../redux/sliderVisibleSlice'
 import { galleryImgs } from '../../data/galleryImages'
 import { changeSliderImgVal, selectSliderImgVal } from '../../redux/sliderImgValSlice'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { memo } from 'react'
 
-
-function GallerySlider(){
+export default memo(function GallerySlider(){
 
     let sliderVisible = useSelector(selectSliderVisible)
     let sliderImgVal = useSelector(selectSliderImgVal)
@@ -38,6 +36,10 @@ function GallerySlider(){
             }}></span>
         </div>
     )
-}
-
-export default GallerySlider
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

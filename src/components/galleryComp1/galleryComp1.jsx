@@ -3,13 +3,13 @@ import { changeSliderImgVal } from '../../redux/sliderImgValSlice'
 import { changeSliderVisible } from '../../redux/sliderVisibleSlice'
 import './style.css'
 import { useDispatch } from 'react-redux'
-
-function GalleryComp1({props}){
+import { memo } from 'react'
+export default memo(function GalleryComp1({props}){
     const dispatch = useDispatch()
 
 
     return(
-        <div className='gallerycomp1' data-aos="zoom-out">
+        <div className='gallerycomp1' data-aos="zoom-in">
            <img src={props.src} className='gallerycomp1Img1 G-textSelection' onClick={() => {
            
             dispatch(changeSliderImgVal(props.id))
@@ -17,6 +17,10 @@ function GalleryComp1({props}){
            }} />
         </div>
     )
-}
-
-export default GalleryComp1
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

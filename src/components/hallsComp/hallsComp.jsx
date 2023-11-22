@@ -1,12 +1,16 @@
 
 import './style.css'
-
-function HallsComp({obj}){
+import { memo } from 'react'
+export default memo(function HallsComp({obj}){
     return(
-        <div className='hallsCompDiv'  data-aos="zoom-out">
+        <div className='hallsCompDiv'  data-aos="zoom-in">
             <img src={obj.src} className='hallsCompImg G-textSelection' />
         </div>
     )
-}
-
-export default HallsComp
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

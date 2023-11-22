@@ -1,6 +1,6 @@
 import './style.css'
-
-function HomeMenuComp({obj}){
+import { memo } from 'react'
+export default memo(function HomeMenuComp({obj}){
     return (
         <div className='homemenucompdiv' data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
@@ -8,6 +8,10 @@ function HomeMenuComp({obj}){
             <img src={obj.src} className='homemenucompimg' />
         </div>
     )
-}
-
-export default HomeMenuComp
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

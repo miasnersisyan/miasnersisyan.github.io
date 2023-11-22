@@ -5,6 +5,8 @@ import { hallsComp, hallsCompSlicer } from "./hallsCompSlice";
 import { roomItem, roomItemSlicer } from "./hallsRoomItemSlice";
 import { menuComp, menuCompSlicer } from "./menuCompSlice";
 import { languageVal, languageValSlicer } from "./languageValSlice";
+import { checkSlice, checkSliceSlicer } from "./checkSlice";
+import { aboutImg, aboutImgSlicer } from "./aboutImgSlice";
 
 const store = createStore(
     combineReducers({
@@ -13,14 +15,18 @@ const store = createStore(
        hallsComp : hallsCompSlicer,
        roomItem : roomItemSlicer,
        menuComp : menuCompSlicer,
-       languageVal : languageValSlicer
+       languageVal : languageValSlicer,
+       checkSlice : checkSliceSlicer,
+       aboutImg : aboutImgSlicer
     }),{
        sliderVisible : sliderVisible,
        sliderImgVal : sliderImgVal,
        hallsComp : hallsComp,
        roomItem : roomItem,
        menuComp : menuComp,
-       languageVal : languageVal
+       languageVal : languageVal,
+       checkSlice : checkSlice,
+       aboutImg : aboutImg
     }
 )
 

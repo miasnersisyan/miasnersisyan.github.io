@@ -10,23 +10,16 @@ import { useEffect, useState } from 'react';
 import { selectRoomItem } from '../../redux/hallsRoomItemSlice';
 import { selectLanguageVal } from '../../redux/languageValSlice';
 
+import { memo } from 'react';
+import SliceMain from '../../components/sliceMain/sliceMain';
 
-
-function Halls(){
+export default memo(function Halls(){
     const { t } = useTranslation();
     let hallsComp = useSelector(selectHallsComp)
     let roomItem = useSelector(selectRoomItem)
     let languageVal = useSelector(selectLanguageVal)
 
-    const divStyle = {
-        width : '100%',
-        padding : '70px 0px',
-        backgroundImage : 'url(./images/imgOut2.png)',
-        backgroundSize : 'cover',
-        backgroundRepeat : 'no-repeat',
-        backgroundPosition : 'center',
-        backgroundAttachment : 'fixed'
-    }
+    
     const hallsCompChange = [
         {id : 0,item : t('hall1'),constItem : 'hall 1',constItem2 : 'hall1'},
         {id : 1,item : t('hall2'),constItem : 'hall 2',constItem2 : 'hall2'},
@@ -42,21 +35,6 @@ function Halls(){
         {id : 2,itemName : t('hall3'),itemVal1 : t('hallsPeople3'),itemVal2 : t('hallsPrice3'),constItem : 'hall 3'},
         {id : 3,itemName : t('hall4'),itemVal1 : t('hallsPeople4'),itemVal2 : t('hallsPrice4'),constItem : 'hall 4'},
         {id : 4,itemName : t('hall5'),itemVal1 : t('hallsPeople5'),itemVal2 : t('hallsPrice5'),constItem : 'hall 5'},
-    ]
-    const hallsCompInfoHall1 = [
-        {id : 0,itemName : t('hall1'),itemVal1 : t('hallsPeople1'),itemVal2 : t('hallsPrice1'),constItem : 'hall 1'},
-    ]
-    const hallsCompInfoHall2 = [
-        {id : 0,itemName : t('hall2'),itemVal1 : t('hallsPeople2'),itemVal2 : t('hallsPrice2'),constItem : 'hall 2'},
-    ]
-    const hallsCompInfoHall3 = [
-        {id : 0,itemName : t('hall3'),itemVal1 : t('hallsPeople3'),itemVal2 : t('hallsPrice3'),constItem : 'hall 3'},
-    ]
-    const hallsCompInfoHall4 = [
-        {id : 0,itemName : t('hall4'),itemVal1 : t('hallsPeople4'),itemVal2 : t('hallsPrice4'),constItem : 'hall 4'},
-    ]
-    const hallsCompInfoHall5 = [
-        {id : 0,itemName : t('hall5'),itemVal1 : t('hallsPeople5'),itemVal2 : t('hallsPrice5'),constItem : 'hall 5'},
     ]
 
 
@@ -101,13 +79,12 @@ function Halls(){
         hallsCompRefresh()
     },[roomItem,languageVal])
     
+    
    
 
     return(
         <div className='halls'>
-            <div style={divStyle}>
-                <h1 className='G-mainHeader G-textSelection'>{t('halls')}</h1>
-            </div>
+           <SliceMain sliceName='halls' />
             <div className='halls-2'>
                 
           <ChangeHallsComp arr={hallsCompChange} />
@@ -136,6 +113,10 @@ function Halls(){
 
         </div>
     )
-}
-
-export default Halls
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

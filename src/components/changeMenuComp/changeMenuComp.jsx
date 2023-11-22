@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { changeMenuComp } from '../../redux/menuCompSlice'
 import { useTranslation } from 'react-i18next';
 import { selectLanguageVal } from '../../redux/languageValSlice'
-
-function ChangeMenuComp({valueList}){
+import { memo } from 'react'
+export default memo(function ChangeMenuComp({valueList}){
    let languageVal = useSelector(selectLanguageVal)
     const { t } = useTranslation();
     let [divVisible,setDivVisible] = useState('none')
@@ -54,6 +54,10 @@ useEffect(() => {
          </div>
         </div>
     )
-}
-
-export default ChangeMenuComp 
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

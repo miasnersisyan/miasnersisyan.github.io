@@ -7,14 +7,15 @@ import HomeHallsComp from '../../components/homeHallsComp/homeHallsComp';
 import { homeMenu } from '../../data/homeMenu';
 import HomeMenuComp from '../../components/homeMenuComp/homeMenuComp';
 import DeliverSliceComp from '../../components/deliverSliceComp/deliverSliceComp';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
-function Home(){
+export default memo(function Home(){
     const { t } = useTranslation();
 
     return(
         <div className='home'>
             <div className='home-1'>
-               <img src='./images/imgOut1.png' className='home-1Img' />
+               <img src='./images/imgOut1.png' className='home-1Img' alt='' />
                <div className='home-1DarkDiv'>
                   <div className='home-1DarkDiv-1'>
                   <h1 className='home-1Header1 G-textSelection'>{t('welcome')}</h1>
@@ -42,10 +43,7 @@ function Home(){
                         HILLZONE
                      </h1>
                      <p className='home-2p2 G-textSelection'>
-                        «Դոն Ֆիշ» ռեստորանային համալիրն իր հյուրընկալ դռներն է բացում բոլոր նրանց համար, ովքեր ցանկանում են կտրվել քաղաքային աղմուկից և վայելել հաճելի ժամանց, համեղ խոհանոց և բարձրաճաշակ երաժշտություն։
-                        Ձեր կարևորագույն տոնական միջոցառումների անցկացումը վստահե՛ք մեզ. մենք երաշխավորում ենք բարձրակարգ սպասարկում։
-                        Այցելե՛ք «Դոն Ֆիշ» և անմոռանալի դարձրե՛ք ձեր օրը մեր շքեղ և ինքնատիպ սրահներում, որոնք կգոհացնեն անգամ ամենաքմահաճ հաճախորդներին։
-                        Սիրով սպասում ենք։
+                     {t('homeText1')}
                      </p>
                   </div>
                   <div className='home-2Div1' data-aos="flip-left"
@@ -100,6 +98,10 @@ function Home(){
             <DeliverSliceComp />
         </div>
     )
-}
-
-export default Home
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

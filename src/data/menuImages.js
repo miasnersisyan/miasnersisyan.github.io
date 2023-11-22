@@ -19,8 +19,8 @@ export const menuImages = [
     {id : 16,src : './images/menuImg1.png',imgType : 'coffee tea'},
     {id : 17,src : './images/menuImg1.png',imgType : 'coffee tea'},
     {id : 18,src : './images/menuImg1.png',imgType : 'bar'},
-    {id : 19,src : './images/menuImg1.png',imgType : 'bar'},
-    {id : 20,src : './images/menuImg1.png',imgType : 'bar'},
+    {id : 19,src : './images/menuImg1.png',imgType : 'charms'},
+    {id : 20,src : './images/menuImg1.png',imgType : 'beer snacks'},
     {id : 21,src : './images/menuImg1.png',imgType : 'hookah'},
     {id : 22,src : './images/menuImg1.png',imgType : 'hookah'},
    

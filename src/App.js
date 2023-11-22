@@ -12,12 +12,68 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import GallerySlider from './components/gallerSlider/gallerySlider';
+import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { changeCheckSlice } from './redux/checkSlice';
+
 
 function App() {
-
+  const location = useLocation();
+  
+  const dispatch = useDispatch()
+  AOS.init();
   useEffect(() => {
-    AOS.init();
-  },[])
+    
+    if(location.pathname === '/'){
+      dispatch(changeCheckSlice({
+        halls : 'white',
+        menu : 'white',
+        gallery : 'white',
+        about : 'white',
+        contact : 'white'
+    }))
+    }else if(location.pathname === '/halls'){
+      dispatch(changeCheckSlice({
+        halls : 'gold',
+        menu : 'white',
+        gallery : 'white',
+        about : 'white',
+        contact : 'white'
+    }))
+    }else if(location.pathname === '/menu'){
+      dispatch(changeCheckSlice({
+        halls : 'white',
+        menu : 'gold',
+        gallery : 'white',
+        about : 'white',
+        contact : 'white'
+    }))
+    }else if(location.pathname === '/gallery'){
+      dispatch(changeCheckSlice({
+        halls : 'white',
+        menu : 'white',
+        gallery : 'gold',
+        about : 'white',
+        contact : 'white'
+    }))
+    }else if(location.pathname === '/aboutUs'){
+      dispatch(changeCheckSlice({
+        halls : 'white',
+        menu : 'white',
+        gallery : 'white',
+        about : 'gold',
+        contact : 'white'
+    }))
+    }else if(location.pathname === '/contact'){
+      dispatch(changeCheckSlice({
+        halls : 'white',
+        menu : 'white',
+        gallery : 'white',
+        about : 'white',
+        contact : 'gold'
+    }))
+    }
+  },[location.pathname])
 
   return (
     <div className="App">
@@ -34,6 +90,15 @@ function App() {
        </Routes>
      <Footer />
     </div>
+
+
+
+
+    // http://192.168.0.111:3000
+
+
+
+
   );
 }
 

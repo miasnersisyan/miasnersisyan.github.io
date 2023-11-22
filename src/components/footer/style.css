@@ -7,9 +7,11 @@
 .footer-1{
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     padding: 40px 0px;
 }
+
+
 
 .footer-1-1{
     width: 32%;

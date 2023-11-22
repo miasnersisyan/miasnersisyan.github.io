@@ -1,20 +1,23 @@
 import './style.css'
-
-function Footer(){
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
+import { memo } from 'react'
+export default memo(function Footer(){
+    const { t } = useTranslation();
     return(
         <div className='footer'>
             <div className='G-center'>
             <div className='G-appMainDiv footer-1'>
                  <div className='footer-1-1'>
+                 <Link to='/'> 
                     <img src='./images/logoBlack.png' className='footerLogoImg G-textSelection' />
+                   </Link>
                     <p className='footer-p1 G-textSelection'>
-                    «Դոն Ֆիշ» ռեստորանային համալիր` ընտանեկան ու ընկերական փոքրիկ հավաքույթներից մինչև մեծ ու շքեղ հանդիսություններ, կորպորատիվ միջոցառումներ
+                   {t('footerText1')}
                     </p>
+                   
                     <p className='footer-p1 G-textSelection'>
-                    «Դոն Ֆիշ»` համեղ և շքեղ
-                    </p>
-                    <p className='footer-p1 G-textSelection'>
-                    Աշխ․ ժամեր՝ ամեն օր՝ 10։00-00։00
+                    {t('footerText2')}
                     </p>
                  </div>
                  <div className='footer-1-1'>
@@ -33,7 +36,7 @@ function Footer(){
                  </div>
                  <div className='footer-1-1'>
                     <p className='footer-p1 G-textSelection'>
-                    Ախորժելի ուտեստներ, հիասքանչ միջավայր, բարձրակարգ սպասարկում. ահա մեր այցեքարտը…
+                    {t('footerText3')}
                     </p>
                  </div>
             </div>
@@ -41,14 +44,20 @@ function Footer(){
 
             <div className='footer-2'>
                 <p className='footer-2p1'>
-                Copyright 2023 | Hill Zone LLC | All Rights Reserved | Website by Miasnik
+               Copyright 2023 | Hill Zone LLC | All Rights Reserved | <a href='https://github.com/miasnersisyan' target='blank' className='footer-2p1'> Website by Miasnik</a>
                 </p>
             </div>
 
 
           
         </div>
-    )
-}
 
-export default Footer
+       
+    )
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

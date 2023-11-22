@@ -1,7 +1,7 @@
 
 import './style.css'
-
-function HomeHallsComp({obj}){
+import { memo } from 'react'
+export default memo(function HomeHallsComp({obj}){
     return (
         <div className='homehallscompdiv' data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
@@ -9,6 +9,10 @@ function HomeHallsComp({obj}){
             <img src={obj.src} className='homehallscompimg' />
         </div>
     )
-}
-
-export default HomeHallsComp
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

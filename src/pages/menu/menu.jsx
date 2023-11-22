@@ -5,21 +5,14 @@ import './style.css'
 import { useTranslation } from 'react-i18next';
 import { selectMenuComp } from '../../redux/menuCompSlice';
 import MenuComp from '../../components/menuComp/menuComp';
-
-function Menu(){
+import { memo } from 'react';
+import SliceMain from '../../components/sliceMain/sliceMain';
+export default memo(function Menu(){
     const { t } = useTranslation();
 
     let menuComp = useSelector(selectMenuComp)
 
-    const divStyle = {
-        width : '100%',
-        padding : '70px 0px',
-        backgroundImage : 'url(./images/imgOut2.png)',
-        backgroundSize : 'cover',
-        backgroundRepeat : 'no-repeat',
-        backgroundPosition : 'center',
-        backgroundAttachment : 'fixed'
-    }
+ 
 
     const menuCompChange = [
         {id : 0,item : t('snack'),constItem : 'snack',},
@@ -41,9 +34,7 @@ function Menu(){
 
     return(
         <div className='menu'>
-           <div style={divStyle}>
-                <h1 className='G-mainHeader G-textSelection'>{t('menu')}</h1>
-            </div>
+           <SliceMain sliceName='menu' />
            
            <div className='G-center'>
             <div className='G-appMainDiv menu-1'>
@@ -62,6 +53,10 @@ function Menu(){
 
         </div>
     )
-}
-
-export default Menu
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

@@ -4,8 +4,8 @@ import './style.css'
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { changeLanguageVal } from '../../redux/languageValSlice';
-
-function ChangeLangComp(){
+import { memo } from 'react'
+export default memo(function ChangeLangComp(){
     const { i18n } = useTranslation();
 
   const changeLanguage = (language) => {
@@ -104,6 +104,10 @@ function ChangeLangComp(){
           </div>
         </div>
     )
-}
-
-export default ChangeLangComp
+},(prevProps,nextProps) => {
+  if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+   return true
+  }else{
+   return false
+  }
+})

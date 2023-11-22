@@ -4,7 +4,8 @@ import { changeHallsComp } from '../../redux/hallsCompSlice'
 import { changeRoomItem } from '../../redux/hallsRoomItemSlice'
 import './style.css'
 import { useDispatch, useSelector } from 'react-redux'
-function ChangeHallsCompWeb({arr}){
+import { memo } from 'react'
+export default memo(function ChangeHallsCompWeb({arr}){
 
    
    const dispatch = useDispatch()
@@ -30,6 +31,10 @@ return(
     </div>
 )
 
-}
-
-export default ChangeHallsCompWeb
+},(prevProps,nextProps) => {
+    if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+     return true
+    }else{
+     return false
+    }
+ })

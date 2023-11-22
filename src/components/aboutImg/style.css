@@ -1,0 +1,25 @@
+
+.aboutImg{
+    width: auto;
+    margin: 0px 10px;
+    
+}
+
+.aboutImg1{
+    width: 30px;
+    height: 300px;
+    border-radius: 25px;
+    object-fit: cover;
+    transition: 0.5s;
+    box-shadow: 0px 1px 18px -7px #eeeaea;
+}
+.aboutImg2{
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    object-fit: cover;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0px 1px 18px -7px #eeeaea;
+}

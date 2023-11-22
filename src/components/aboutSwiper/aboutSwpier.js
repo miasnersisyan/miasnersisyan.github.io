@@ -3,8 +3,9 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-function AboutSwiper({sliderArr}){
+import { memo } from 'react'
+import './style.css'
+export default memo(function AboutSwiper({sliderArr}){
     const settings = {
         dots: true,
         infinite: true,
@@ -22,6 +23,10 @@ function AboutSwiper({sliderArr}){
         
           </Slider>
          );
-}
-
-export default AboutSwiper
+},(prevProps,nextProps) => {
+  if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+   return true
+  }else{
+   return false
+  }
+})

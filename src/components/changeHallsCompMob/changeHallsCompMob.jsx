@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useState,useEffect } from 'react'
 import { selectLanguageVal } from '../../redux/languageValSlice'
 import { useTranslation } from 'react-i18next';
-
-function ChangeHallsCompMob({arr}){
+import { memo } from 'react'
+export default memo(function ChangeHallsCompMob({arr}){
    
     const { t } = useTranslation();
      let [divVisible,setDivVisible] = useState('none')
@@ -53,7 +53,10 @@ function ChangeHallsCompMob({arr}){
           </div>
          </div>
      )
- }
- 
- export default ChangeHallsCompMob 
- 
+ },(prevProps,nextProps) => {
+   if(JSON.stringify(prevProps) === JSON.stringify(nextProps)){
+    return true
+   }else{
+    return false
+   }
+})
